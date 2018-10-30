@@ -7,7 +7,7 @@ public class CharacterSets {
 	/**
 	 * IANA assigned MIB enum numbers.
 	 *
-	 * From wap-230-wsp-20010705-a.pdf Any-charset = <Octet 128> Equivalent to the
+	 * From wap-230-wsp-20010705-a.pdf Any-charset = (Octet 128) Equivalent to the
 	 * special RFC2616 charset value "*"
 	 */
 	public static final int ANY_CHARSET = 0x00;
@@ -93,7 +93,7 @@ public class CharacterSets {
 	 *
 	 * @param mibEnumValue An IANA assigned MIBEnum number.
 	 * @return The name string of the charset.
-	 * @throws UnsupportedEncodingException
+	 * @throws UnsupportedEncodingException If encoding is not supported
 	 */
 	public static String getMimeName(int mibEnumValue) throws UnsupportedEncodingException {
 		String name = MIBENUM_TO_NAME_MAP.get(mibEnumValue);
@@ -108,7 +108,7 @@ public class CharacterSets {
 	 *
 	 * @param mimeName The charset name.
 	 * @return The MIBEnum number assigned by IANA for this charset.
-	 * @throws UnsupportedEncodingException
+	 * @throws UnsupportedEncodingException If encoding is not supported
 	 */
 	public static int getMibEnumValue(String mimeName) throws UnsupportedEncodingException {
 		if (null == mimeName) {

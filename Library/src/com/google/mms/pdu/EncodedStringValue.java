@@ -208,6 +208,9 @@ public class EncodedStringValue implements Cloneable {
 
 	/**
 	 * Extract an EncodedStringValue[] from a given String.
+	 * 
+	 * @param src The String
+	 * @return The extracted array
 	 */
 	public static EncodedStringValue[] extract(String src) {
 		String[] values = src.split(";");
@@ -229,6 +232,9 @@ public class EncodedStringValue implements Cloneable {
 
 	/**
 	 * Concatenate an EncodedStringValue[] into a single String.
+	 * 
+	 * @param addr The array to concatenate
+	 * @return The resulting String
 	 */
 	public static String concat(EncodedStringValue[] addr) {
 		StringBuilder sb = new StringBuilder();

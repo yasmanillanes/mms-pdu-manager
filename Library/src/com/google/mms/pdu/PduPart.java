@@ -114,9 +114,7 @@ public class PduPart {
 	}
 
 	/**
-	 * @return A copy of the part data or null if the data wasn't set or the data is
-	 *         stored as Uri.
-	 * @see #getDataUri
+	 * @return A copy of the part data or null if the data wasn't set
 	 */
 	public byte[] getData() {
 		if (mPartData == null) {
@@ -212,9 +210,9 @@ public class PduPart {
 	/**
 	 * Get Content-Location value.
 	 *
-	 * @return the value return PduPart.disposition[0] instead of <Octet 128>
-	 *         (Form-data). return PduPart.disposition[1] instead of <Octet 129>
-	 *         (Attachment). return PduPart.disposition[2] instead of <Octet 130>
+	 * @return the value return PduPart.disposition[0] instead of (Octet 128)
+	 *         (Form-data). return PduPart.disposition[1] instead of (Octet 129)
+	 *         (Attachment). return PduPart.disposition[2] instead of (Octet 130)
 	 *         (Inline).
 	 */
 	public byte[] getContentLocation() {
@@ -223,8 +221,8 @@ public class PduPart {
 
 	/**
 	 * Set Content-Disposition value. Use PduPart.disposition[0] instead of <Octet
-	 * 128> (Form-data). Use PduPart.disposition[1] instead of <Octet 129>
-	 * (Attachment). Use PduPart.disposition[2] instead of <Octet 130> (Inline).
+	 * 128> (Form-data). Use PduPart.disposition[1] instead of (Octet 129)
+	 * (Attachment). Use PduPart.disposition[2] instead of (Octet 130) (Inline).
 	 *
 	 * @param contentDisposition the value
 	 * @throws NullPointerException if the value is null.

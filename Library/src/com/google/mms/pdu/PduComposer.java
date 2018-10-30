@@ -91,8 +91,7 @@ public class PduComposer {
 	/**
 	 * Constructor.
 	 *
-	 * @param context the context
-	 * @param pdu     the pdu to be composed
+	 * @param pdu the pdu to be composed
 	 */
 	public PduComposer(GenericPdu pdu) {
 		mPdu = pdu;
